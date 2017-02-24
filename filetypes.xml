@@ -1,0 +1,7 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <extensionMap>
+      <mapping pattern="V1__init_setup.sql" type="SQL" />
+    </extensionMap>
+  </component>
+</application>

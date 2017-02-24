@@ -1,0 +1,18 @@
+<application>
+  <component name="LanguageInjectionConfiguration">
+    <option name="INSTRUMENTATION" value="ASSERT" />
+    <option name="LANGUAGE_ANNOTATION" value="org.intellij.lang.annotations.Language" />
+    <option name="PATTERN_ANNOTATION" value="org.intellij.lang.annotations.Pattern" />
+    <option name="SUBST_ANNOTATION" value="org.intellij.lang.annotations.Subst" />
+    <option name="RESOLVE_REFERENCES" value="true" />
+    <injection language="JPAQL" injector-id="java">
+      <display-name>Query (org.springframework.data.jpa.repository)</display-name>
+      <place><![CDATA[psiMethod().withName("countQuery").withParameters().definedInClass("org.springframework.data.jpa.repository.Query")]]></place>
+      <place disabled="true"><![CDATA[psiMethod().withName("value").withParameters().definedInClass("org.springframework.data.jpa.repository.Query")]]></place>
+    </injection>
+    <injection language="SQL" injector-id="java">
+      <display-name>Session.prepare (com.datastax.driver.core)</display-name>
+      <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("prepare").withParameters("java.lang.String").definedInClass("com.datastax.driver.core.Session"))]]></place>
+    </injection>
+  </component>
+</application>
